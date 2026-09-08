@@ -2,6 +2,7 @@ import sys
 
 
 def check_building(val: str):
+    """Count and print upper, lower, punctuation, space and digit chars."""
     upper = 0
     lower = 0
     digit = 0
@@ -21,16 +22,21 @@ def check_building(val: str):
     print("The text contains %d characters:" % len(val))
     print("%d upper letters" % upper)
     print("%d lower letters" % lower)
-    print("%d punctuation mark" % punctuation)
+    print("%d punctuation marks" % punctuation)
     print("%d spaces" % space)
     print("%d digits" % digit)
 
 
-if __name__ == "__main__":
-    if (len(sys.argv) < 2):
+def main():
+    """Read a string from argv (or prompt for one) and count its chars."""
+    if len(sys.argv) < 2:
         text = input("What is the text to count?\n")
         check_building(text)
-    elif (len(sys.argv) != 2):
-        print("Usage: python building.py <string>")
+    elif len(sys.argv) > 2:
+        print("AssertionError: more than one argument is provided")
     else:
         check_building(sys.argv[1])
+
+
+if __name__ == "__main__":
+    main()

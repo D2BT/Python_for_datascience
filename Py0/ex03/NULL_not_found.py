@@ -1,4 +1,6 @@
-def NULL_not_found(obj: any) -> int:
+from typing import Any
+
+def NULL_not_found(obj: Any) -> int:
 
     # 1. On récupère le type pour l'affichage final
     obj_type = type(obj)

@@ -43,6 +43,7 @@ NESTED_MORSE = {
 
 
 def main():
+    """Encode the argument string into Morse code and print it."""
     if len(sys.argv) != 2:
         raise AssertionError("the arguments are bad")
 

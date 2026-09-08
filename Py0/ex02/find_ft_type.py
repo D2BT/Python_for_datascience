@@ -1,4 +1,6 @@
-def all_thing_is_obj(object: any) -> int:
+from typing import Any
+
+def all_thing_is_obj(object: Any) -> int:
 
 	obj_type = type(object) #on recupere le type de l'object
 
